@@ -1,12 +1,134 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>fixcode</title>
+
+    <style>
+         @font-face{
+            font-family:AlexBrush-Regular;
+            src:url('home/sandeepsingh/visual/AlexBrush-Regular.ttf');
+             }
+        body{
+            margin:0px;
+            padding:0px;
+            background-color: rgb(243, 235, 235);
+        }
+        h1{
+            text-align:center;
+            font-family:cursive;
+            
+        }
+        #cbody{
+            width:40%;
+            margin:10px auto 0px auto;
+            height:230px;
+            padding:5px;
+            border:3px solid rgb(46, 49, 214);
+            border-radius:16px;
+            background-color: rgb(23, 23, 23);
+
+        }
+        .btn{
+            width:15%;
+            height:50px;
+            margin-top:10px;
+            margin-left:3%;
+            margin-right: auto;
+            border: 2px solid rgb(116, 235, 5);
+            border-radius:20px;
+            box-shadow: -2px 2px 2px rgb(20, 237, 194);
+            background-color: black;
+            color:white;
+        }
+        .btn:hover{
+            
+            color:black;
+            background-color: aqua;
+            
+            font-size:22px ;
+            transition: 0.2s;
+        }
+        #in{
+            width:98%;
+            height:40px;
+            font-size: 18px;
+            border:2px solid black;
+            background-color: aqua;
+            color:rgb(0, 0, 0);
+            border-radius:10px;
+            
+            
+
+        }
+       
+    </style>
 </head>
 <body>
-    <h1>it is second file of Github in singhs branch</h1>
+    <h1>sandeep singh</h1>
+    <div id="cbody">
+    <input type="text" id="in"><br>
+    <button class="btn">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn">+</button>
+    <button class="btn">clr</button>
+    <br>
+    <button class="btn">4</button>
+    <button class="btn">5</button>
+    <button class="btn">6</button>
+    <button class="btn">-</button>
+    <button class="btn">c</button>
+    <br>
+    <button class="btn">7</button>
+    <button class="btn">8</button>
+    <button class="btn">9</button>
+    <button class="btn">0</button>
+    <button class="btn">=</button>
+
+ </div>    
+
 </body>
+<script>
+    let a=document.getElementById("in");
+    let i=document.getElementsByClassName("btn");
+    
+  for(let j=0;j<=14; j++) 
+  {
+    function fun()
+    {    
+       if(i[j].innerHTML=="=")
+       {
+        if(a.value=="")
+        {
+              a.value="";
+              
+             
+        }
+        else
+        {
+        let e=eval(a.value);
+        a.value=e;
+        }
+        
+       }
+       else if(i[j].innerHTML=="c"){
+              let tem=""+a.value;
+             let sl=tem.slice(0,tem.length-1);
+             a.value=sl;
+       }
+       else if(i[j].innerHTML=="clr")
+       {
+             a.value="";
+       }
+       else
+       {
+        
+       a.value=a.value+i[j].innerHTML;
+       }
+    }
+    i[j].addEventListener("click",fun);
+  }
+    </script>
 </html>
