@@ -1,0 +1,66 @@
+
+                              Git and Github use
+            ---------------------------------------------------
+
+
+1.set the configuration 
+    command -> git config  --global user.name "sandeep"
+               git config  --global user.email "sandeepsingh45459@gmail.com"
+
+2.check the user name and user email
+    command: -> git config --global user.name
+                git config --global user.email
+
+    output:->sandeep
+            sandeepsingh45459
+change the name or Email 
+    command: -> git config --global --edit 
+
+3.make the new folder 
+    command:-> mkdir <filename>
+
+4.initialized  the empty git repository 
+   
+   command:git init 
+
+5.check the status of the repository
+   command:-> git status
+
+6.add one or more files to staging area or (add the file untracked area to track area)
+   command:->git add <file_name>
+
+7.commit changes to head 
+   the first commit could be initial commit 
+  
+   command:-> git commit -m "inita commit file"
+
+   commit the particular file from staging area
+   command:->git commit -m "message" <file_name>
+
+   *commit the file direct from unstrage area  this is will do both staging as well as commit also
+    command:- git commit -am "message"
+
+8.display the where is the all commit 
+   command:->git log
+
+9.To remove files from staging area (unstage)
+   command:-> git rm --cached <file_name>
+
+10.To create a new branck with name as branch_name
+   command:-> git branch <branch_name>
+
+11.To switch from current branch to another 
+    command:->git checkout <branch_name>
+
+
+12.To merge branch into current branch
+    command:-> git merge <branch_name>
+
+13.remote the repository to the github first we have to make the remote add origin 
+   
+    command:-> git remote add origin https://github.com/SandeepSingh34/youtube.git
+
+
+14.sent or push the repository to the github 
+
+    command:-> git push -u origin <branch_name>
