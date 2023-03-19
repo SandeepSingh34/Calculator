@@ -1,3 +1,24 @@
+@keyframes logos {
+    from{
+        transition-property:transform;
+        transition-duration:2s;
+        transform:perspective(555px)rotateY(360deg);
+        
+    }
+    
+}
+/* media query */
+@media only screen and (width < 666px) {
+   
+   #featurs li{list-style-type: none;
+    display: inline;
+   
+    margin:30px;
+    padding:6px;
+    font-size: 22px;
+   }
+}
+
 *{
     margin:0px;
     padding:0px;
@@ -13,16 +34,16 @@ body{
     height:360px;
     background-image:linear-gradient(to bottom left,rgba(206, 14, 151,0.3),rgba(181, 10, 76,0.3),rgba(0, 255, 255,0.3));
 
-    margin:130px auto 0px auto;
+    margin:100px auto 0px auto;
     border-radius:30px;
     box-shadow:3px 33px 44px 5px rgb(223, 190, 25);
-    transition-property:box-shadow;
-    transition-duration:2s;
+    
+    
 
     
  }
  #main:hover{
-   
+    
     box-shadow:3px 33px 44px 5px rgb(44, 224, 4);
  }
  #logo{
@@ -31,8 +52,15 @@ body{
     border:2px solid aqua;
     border-radius:40px;
     background-color: rgb(0, 0, 0);
+    animation-name:logos;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-play-state: paused;
  }
-
+#logo:hover{
+  box-shadow:3px 3px 33px 15px rgb(189, 47, 255);
+   animation-play-state:running;
+}
  .username{
   height:33px;
   width:240px;
@@ -62,8 +90,10 @@ body{
   cursor:pointer;
 }
 #btn:hover{
-    background-color: rgb(50, 210, 146);
+    background-color: rgb(148, 22, 186);
     color:black;
+    box-shadow:3px 3px 33px 22px rgb(146, 241, 4);
+   
 }
 #fpass{
     text-decoration:none;
@@ -76,4 +106,39 @@ body{
     display:block;
     margin-top:17px;
     margin-left:4px;
+}
+
+/* navication bar */
+#nav{
+   width:100%;
+   height:60px;
+   background-color: black;
+   margin-top:5px;
+   color:aliceblue
+
+}
+#featurs li{
+    list-style-type: none;
+    display: inline;
+   
+    margin:30px;
+    padding:6px;
+    font-size: 22px;
+}
+#featurs{
+    margin-top:-14px;
+    float:right;
+   
+}
+
+#featurs a{
+    text-decoration:none;
+    color:aliceblue;
+
+}
+#featurs li:hover{
+    background-color: rgb(19, 230, 230);
+    color:rgba(0, 0, 0);
+    border-radius:22px;
+    box-shadow:3px 3px 33px 14px rgb(33, 242, 57);
 }
